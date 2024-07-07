@@ -1,0 +1,30 @@
+:root {
+  --shell-bg:  255, 250, 245 ;
+  --shell-fg: 25, 25, 20;
+  --shell-fg-secondary: 120, 117, 110;
+  --card-bg: 255, 252, 245;
+  --card-fg: var(--shell-fg);
+  --card-border: 228, 214, 196;
+  --card-bg-hover: 250, 248, 240;
+  --link-fg: 129, 120, 107;
+}
+
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --shell-bg: 28, 25, 20;
+    --shell-fg: 255, 250, 245;
+  }
+} */
+
+@font-face {
+  font-family: 'Sentient';
+  src: url('/font/serif.woff2') format('woff2');
+  font-display: swap;
+}
+
+html,body {
+  background-color: rgb(var(--shell-bg));
+  color: rgb(var(--shell-fg));
+  font-family: 'Sentient';
+}
+

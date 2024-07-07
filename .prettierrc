@@ -1,0 +1,8 @@
+{
+  "jsxSingleQuote": true,
+  "singleQuote": true,
+  "htmlWhitespaceSensitivity": "ignore",
+  "semi": false,
+  "trailingComma": "all",
+  "svelteAllowShorthand": true
+}
