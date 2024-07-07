@@ -22,6 +22,11 @@
       icon: '/logos/kotlin.svg',
       name: 'Kotlin',
     },
+    rust: {
+      color: '#732d1d40',
+      icon: '/logos/rust.svg',
+      name: 'Rust',
+    },
   }
 
   type Technology = keyof typeof technology
@@ -44,6 +49,6 @@
     display: grid;
     place-items: center;
     background-color: var(--color);
-    padding: 12px;
+    padding: 8px;
   }
 </style>

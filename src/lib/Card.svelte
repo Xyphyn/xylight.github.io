@@ -1,15 +1,29 @@
 <script lang="ts">
   import type { Snippet } from 'svelte'
 
-  let { title, body, children, shadow = true, round = true, layout = true, href, ...props } = $props<{
+  let { title, body, children, shadow = true, round = true,
+    layout = true, href, size = 'md', alt = false, ...props } = $props<{
     title?: Snippet<[any]>
     body?: Snippet<[any]>,
     children?: Snippet<[any]>,
     shadow?: boolean,
     round?: boolean,
     layout?: boolean,
-    href?: string
+    href?: string,
+    size?: Size,
+    alt?: boolean
   }>()
+
+  const sizes: {
+    [key: string]: string
+  } = {
+    none: '',
+    xs: 'card-xs',
+    sm: 'card-sm',
+    md: 'card-md'
+  }
+
+  type Size = keyof typeof sizes
 </script>
 
 <svelte:element
@@ -18,7 +32,8 @@
   class:card-shadow={shadow}
   class:card-round={round}
   class:card-layout={layout}
-  class="card card-md"
+  class:card-alt={alt}
+  class="card {sizes[size]}"
 >
   {#if title}
     <span class="title">{@render title()}</span>
@@ -40,9 +55,21 @@
     text-decoration: none;
   }
 
+  .card-alt {
+    background-color: rgb(var(--card-bg-secondary));
+  }
+
   .card:hover {
     background-color: rgb(var(--card-bg-hover));
     cursor: pointer;
+  }
+
+  .card-xs {
+    padding: 0.5rem 0.5rem;
+  }
+
+  .card-sm {
+    padding: 1rem 1rem;
   }
 
   .card-md {

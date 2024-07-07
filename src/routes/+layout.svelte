@@ -12,6 +12,7 @@
   .shell {
     padding: 2rem;
     max-width: 48rem;
+    place-self: center;
     margin-left: auto;
     margin-right: auto;
   }

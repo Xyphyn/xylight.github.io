@@ -9,6 +9,12 @@
     xylight
     <span style="font-weight:300;">.dev</span>
   </h1>
+
+  <div class="footer">
+    <Card alt size="xs" href="https://github.com/Xyphyn">
+      <img src="/logos/github.svg" width={32} height={32} alt="GitHub">
+    </Card>
+  </div>
   <!-- <p class="description fade">UI Design — Software Development</p> -->
 </header>
 <section>
@@ -35,7 +41,7 @@
 <section>
   <h2 style="line-height: 1;">What I use</h2>
   <div class="technologies">
-    <Technologies itemSize={32} technologies={['svelte', 'typescript', 'kotlin', 'typescript']} />
+    <Technologies itemSize={32} technologies={['svelte', 'typescript', 'kotlin', 'rust']} />
   </div>
 </section>
 <section>
@@ -107,5 +113,18 @@
     gap: .25rem;
     align-items: center;
     flex-wrap: wrap;
+  }
+
+  .footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: .25rem;
+  }
+
+  .footer .link {
+    padding: .25rem;
+    width: 48px;
+    height: 48px;
   }
 </style>

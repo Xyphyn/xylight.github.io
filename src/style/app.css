@@ -3,6 +3,7 @@
   --shell-fg: 25, 25, 20;
   --shell-fg-secondary: 120, 117, 110;
   --card-bg: 255, 252, 245;
+  --card-bg-secondary: 250, 245, 235;
   --card-fg: var(--shell-fg);
   --card-border: 228, 214, 196;
   --card-bg-hover: 250, 248, 240;
@@ -26,5 +27,7 @@ html,body {
   background-color: rgb(var(--shell-bg));
   color: rgb(var(--shell-fg));
   font-family: 'Sentient';
+  padding: 0;
+  margin: 0;
 }
 
