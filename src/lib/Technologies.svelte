@@ -1,8 +1,5 @@
-<script lang="ts">
-  let { technologies, itemSize = 32 } = $props<{
-    technologies: Technology[]
-    itemSize?: number
-  }>()
+<script lang="ts" context="module">
+  export type Technology = keyof typeof technology
 
   const technology: {
     [key: string]: { color: string; icon: string; name: string }
@@ -28,8 +25,13 @@
       name: 'Rust',
     },
   }
+</script>
 
-  type Technology = keyof typeof technology
+<script lang="ts">
+  let { technologies, itemSize = 32 } = $props<{
+    technologies: Technology[]
+    itemSize?: number
+  }>()
 </script>
 
 {#each technologies as tech}

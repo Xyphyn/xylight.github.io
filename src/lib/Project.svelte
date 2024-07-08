@@ -1,6 +1,8 @@
 <script lang="ts">
   import type { Snippet } from 'svelte'
   import Card from './Card.svelte'
+  import type { Technology } from './Technologies.svelte'
+  import Technologies from './Technologies.svelte'
 
   let {
     link,
@@ -14,19 +16,6 @@
     body: Snippet
     technologies?: Technology[]
   }>()
-
-  const technology: {
-    [key: string]: { color: string; icon: string; name: string }
-  } = {
-    svelte: { color: '#ff3e0030', icon: '/logos/svelte.svg', name: 'Svelte' },
-    typescript: {
-      color: '#3178c640',
-      icon: '/logos/typescript.svg',
-      name: 'TypeScript',
-    },
-  }
-
-  type Technology = keyof typeof technology
 </script>
 
 <Card {title} {body} href={link?.url}>
@@ -37,12 +26,7 @@
       </span>
     {/if}
     {#if technologies.length > 0}
-      {#each technologies as tech}
-        {@const item = technology[tech]}
-        <div class="technology" style="--color: {item?.color}">
-          <img src={item?.icon} alt="test" width="24" height="24" />
-        </div>
-      {/each}
+      <Technologies itemSize={24} {technologies} />
     {/if}
   </div>
 </Card>

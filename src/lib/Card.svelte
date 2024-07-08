@@ -53,6 +53,7 @@
     border: 1px solid rgb(var(--card-border));
     transition: background-color 100ms;
     text-decoration: none;
+    fill: rgb(var(--card-fg));
   }
 
   .card-alt {

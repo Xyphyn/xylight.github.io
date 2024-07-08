@@ -1,6 +1,7 @@
 :root {
-  --shell-bg:  255, 250, 245 ;
-  --shell-fg: 25, 25, 20;
+  --shell-bg:  255, 250, 245;
+  --shell-bg-dots: 220, 210, 200;
+  --shell-fg: 35, 35, 30;
   --shell-fg-secondary: 120, 117, 110;
   --card-bg: 255, 252, 245;
   --card-bg-secondary: 250, 245, 235;
@@ -10,12 +11,19 @@
   --link-fg: 129, 120, 107;
 }
 
-/* @media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: dark) {
   :root {
-    --shell-bg: 28, 25, 20;
-    --shell-fg: 255, 250, 245;
+    --shell-bg: 25, 28, 25;
+    --shell-fg: 230, 240, 230;
+    --shell-bg-dots: var(--card-bg-hover);
+    --card-bg: 35, 40, 35;
+    --card-bg-secondary: 20, 25, 20;
+    --card-border: 50, 55, 50;
+    --card-fg: var(--shell-fg);
+    --card-bg-hover: 45, 50, 45;
+    --link-fg: 120, 129, 118;
   }
-} */
+}
 
 @font-face {
   font-family: 'Sentient';

@@ -2,6 +2,8 @@
   import Card from '$lib/Card.svelte'
   import Project from '$lib/Project.svelte'
   import Technologies from '$lib/Technologies.svelte';
+
+
 </script>
 
 <header class="heading center">
@@ -12,7 +14,16 @@
 
   <div class="footer">
     <Card alt size="xs" href="https://github.com/Xyphyn">
-      <img src="/logos/github.svg" width={32} height={32} alt="GitHub">
+      <img src="/logos/github.svg" width={28} height={28} alt="GitHub">
+    </Card>
+    <Card alt size="xs" href="mailto:xylight@xylight.dev">
+      <img src="/logos/email.svg" width={28} height={28} alt="Email">
+    </Card>
+    <Card alt size="xs" href="https://lemdro.id/u/xylight">
+      <img src="/logos/lemmy.svg" width={28} height={28} alt="Lemmy">
+    </Card>
+    <Card alt size="xs" href="#discord">
+      <img src="/logos/discord.svg" width={28} height={28} alt="Discord">
     </Card>
   </div>
   <!-- <p class="description fade">UI Design — Software Development</p> -->
@@ -60,7 +71,7 @@
         {/snippet}
       </Project>
     </div>
-    <Card>
+    <Project link={{ url: 'https://imagi.xylight.dev', name: 'imagi.xylight.dev' }} technologies={['svelte', 'typescript']}>
       {#snippet title()}
         Imagi
       {/snippet}
@@ -68,9 +79,31 @@
         A small "social platform" I made to help me learn how to use Pocketbase.
         The post list, comments, etc are automatically updated in real time.
       {/snippet}
-    </Card>
+    </Project>
+    <Project link={{ url: 'https://github.com/Xyphyn/Pulse', name: 'github.com' }}
+    technologies={['kotlin']}>
+      {#snippet title()}
+        Pulse
+      {/snippet}
+      {#snippet body()}
+        A Minestom server written to freshen my Kotlin skills. It has a few minigames,
+        and thanks to the nature of Minestom, can handle thousands of players easily.
+        The code is not good. 
+      {/snippet}
+    </Project>
+    <Project link={{ url: 'https://github.com/Xyphyn/base-to-base', name: 'github.com' }}
+    technologies={['rust']}>
+      {#snippet title()}
+        Base to Base
+      {/snippet}
+      {#snippet body()}
+        A tiny command line utility I made to learn Rust. It lets you easily convert numbers
+        between bases, such as seeing all the conversions of a hex number at once.
+      {/snippet}
+    </Project>
   </div>
 </section>
+<p style="font-size: 14px; text-align: center;">My username on most platforms is Xylight, or Xyphyn.</p>
 
 <style>
   .center {
@@ -104,7 +137,13 @@
   }
 
   .grid-auto {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  @media screen and (min-width: 768px) {
+    .grid-auto {
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
 
   .technologies {
@@ -119,12 +158,6 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: .25rem;
-  }
-
-  .footer .link {
-    padding: .25rem;
-    width: 48px;
-    height: 48px;
+    gap: .5rem;
   }
 </style>
