@@ -48,20 +48,42 @@
 
 <style>
   .card {
-    background-color: rgb(var(--card-bg));
+    background: linear-gradient(to bottom, rgb(var(--card-bg)), rgb(var(--card-bg-2)));
     color: rgb(var(--card-fg));
     border: 1px solid rgb(var(--card-border));
-    transition: background-color 100ms;
+    transition: --card-bg-1 100ms, --card-bg-2 100ms;
     text-decoration: none;
     fill: rgb(var(--card-fg));
+    position: relative;
+    z-index: 1;
+  }
+
+  
+  .card::before {
+    position: absolute;
+    content: '';
+    inset: 0;
+    background-image: linear-gradient(to bottom, rgb(var(--card-bg)), rgb(var(--card-bg-hover)));
+    z-index: -1;
+    transition: opacity 50ms linear;
+    opacity: 0;
+  }
+
+  .card-round::before {
+    border-radius: .75rem;
+  }
+  
+
+  .card:hover::before {
+    opacity: 1;
   }
 
   .card-alt {
-    background-color: rgb(var(--card-bg-secondary));
+    background: rgb(var(--card-bg-secondary));
   }
 
   .card:hover {
-    background-color: rgb(var(--card-bg-hover));
+    /* background: linear-gradient(to bottom, var(--card-bg-hover), var(--card-bg-hover)); */
     cursor: pointer;
   }
 

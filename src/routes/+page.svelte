@@ -1,9 +1,10 @@
 <script>
   import Card from '$lib/Card.svelte'
   import Project from '$lib/Project.svelte'
-  import Technologies from '$lib/Technologies.svelte';
+  import Technologies from '$lib/Technologies.svelte'
+  import { slide } from 'svelte/transition'
 
-
+  
 </script>
 
 <article class="body">
@@ -30,7 +31,7 @@
   <!-- <p class="description fade">UI Design — Software Development</p> -->
 </header>
 <section>
-  <h2 style="line-height: 1;">What I do</h2>
+  <h2 style="line-height: 1; margin-top: 0;">What I do</h2>
   <div class="grid grid-auto">
     <Card>
       {#snippet title()}
@@ -111,6 +112,10 @@
 </article>
 
 <style>
+  h2 {
+    margin-top: 3rem;
+  }
+
   .center {
     text-align: center;
   }
