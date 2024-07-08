@@ -6,6 +6,7 @@
 
 </script>
 
+<article class="body">
 <header class="heading center">
   <h1 class="title">
     xylight
@@ -107,6 +108,7 @@
   </div>
 </section>
 <p style="font-size: 14px; text-align: center;">My username on most platforms is Xylight, or Xyphyn.</p>
+</article>
 
 <style>
   .center {
@@ -167,6 +169,16 @@
   @media (prefers-color-scheme: dark) {
     .adaptive-color {
       filter: invert(100%) hue-rotate(180deg) brightness(500%); 
+    }
+  }
+
+  .body {
+    padding: 1.5rem;
+  }
+
+  @media screen and (min-width: 768px) {
+    .body {
+      padding: 2rem;
     }
   }
 </style>

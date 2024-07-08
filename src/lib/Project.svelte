@@ -3,6 +3,7 @@
   import Card from './Card.svelte'
   import type { Technology } from './Technologies.svelte'
   import Technologies from './Technologies.svelte'
+  import { Icon, Link } from 'svelte-hero-icons'
 
   let {
     link,
@@ -22,6 +23,7 @@
   <div class="footer">
     {#if link}
       <span class="link space-right">
+        <Icon src={Link} size="16" micro />
         {link.name}
       </span>
     {/if}
@@ -39,6 +41,8 @@
     font-size: small;
     text-decoration: none;
     color: rgb(var(--link-fg));
+    align-items: center;
+    display: inline-flex;
   }
 
   .link:hover {

@@ -19,16 +19,17 @@
 <style>
   .layout {
     z-index: 0;
+    min-height: 100svh;
   }
 
   .shell {
-    padding: 2rem;
     max-width: 48rem;
     place-self: center;
     margin-left: auto;
     margin-right: auto;
     z-index: 50;
     position: relative;
+    height: 100%;
   }
 
   :global(.shell > *) {
