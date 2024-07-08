@@ -116,10 +116,22 @@
   }
 
   .title {
-    font-size: 4em;
+    font-size: 3em;
     display: inline-flex;
     flex-direction: row;
     margin: 0;
+  }
+
+  @media screen and (min-width: 468px) {
+    .title {
+      font-size: 4em;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    .title {
+      font-size: 5em;
+    }
   }
 
   .heading {
