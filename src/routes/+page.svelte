@@ -2,17 +2,18 @@
   import Card from '$lib/Card.svelte'
   import Project from '$lib/Project.svelte'
   import Technologies from '$lib/Technologies.svelte'
+    import { Icon, Sparkles } from 'svelte-hero-icons'
   import { slide } from 'svelte/transition'
 
-  
+
 </script>
 
 <article class="body">
 <header class="heading center">
   <h1 class="title">
     xylight
-    <span style="font-weight:300;">.dev</span>
-  </h1>
+  <span style="font-weight:300;color:rgb(var(--shell-fg));">.dev</span>
+</h1>
 
   <div class="footer">
     <Card alt size="xs" href="https://github.com/Xyphyn">
@@ -47,8 +48,8 @@
         Software Development
       {/snippet}
       {#snippet body()}
-        I'll occasionally write small pieces of software, especially if there's a repetetive task
-        I need to do. I often try new programming languages when I write these. Base-to-base, a number converter,
+        I'll occasionally write small pieces of software, especially if there's a repetitive task
+        I need to automate. I often try new programming languages when I write these. Base-to-base, a number converter,
         helped me learn rust and it's very useful to convert hexadecimal to decimal and back.
       {/snippet}
     </Card>
@@ -112,6 +113,18 @@
 </article>
 
 <style>
+  @keyframes gradientAnimation {
+    0% {
+      background-position-x: left;
+    }
+    50% {
+      background-position-x: right;
+    }
+    0% {
+      background-position-x: left;
+    }
+  }
+
   h2 {
     margin-top: 3rem;
   }
@@ -125,6 +138,18 @@
     display: inline-flex;
     flex-direction: row;
     margin: 0;
+    background: linear-gradient(90deg, rgba(255,77,49,1) 0%, rgba(255,205,108,1) 32%, rgba(255, 173, 105,1) 74%, rgba(255,77,49,1) 100%);
+    background-clip: text;
+    background-size: 200%;
+    animation: gradientAnimation 10s infinite ease-in-out;
+    color: transparent;
+    position: relative;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    .title {
+      background-image: linear-gradient(90deg, rgba(148,255,203,1) 0%, rgba(108,194,255,1) 32%, rgba(107,255,105,1) 64%, rgba(49,117,255,1) 100%);
+    }
   }
 
   @media screen and (min-width: 468px) {
