@@ -17,11 +17,11 @@
     --shell-fg: 230, 240, 230;
     --shell-bg-dots: var(--card-bg-hover);
     --card-bg: 35, 40, 35;
-    --card-bg-secondary: 20, 25, 20;
-    --card-border: 50, 55, 50;
+    --card-bg-secondary: 10, 15, 10;
+    --card-border: 60, 65, 60;
     --card-fg: var(--shell-fg);
     --card-bg-hover: 45, 50, 45;
-    --link-fg: 120, 129, 118;
+    --link-fg: 176, 181, 176;
   }
 }
 

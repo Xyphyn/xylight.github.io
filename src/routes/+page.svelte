@@ -14,13 +14,16 @@
 
   <div class="footer">
     <Card alt size="xs" href="https://github.com/Xyphyn">
-      <img src="/logos/github.svg" width={28} height={28} alt="GitHub">
+      <img src="/logos/github.svg" width={28} height={28} alt="GitHub" class="adaptive-color">
     </Card>
     <Card alt size="xs" href="mailto:xylight@xylight.dev">
-      <img src="/logos/email.svg" width={28} height={28} alt="Email">
+      <img src="/logos/email.svg" width={28} height={28} alt="Email" class="adaptive-color">
     </Card>
     <Card alt size="xs" href="https://lemdro.id/u/xylight">
       <img src="/logos/lemmy.svg" width={28} height={28} alt="Lemmy">
+    </Card>
+    <Card alt size="xs" href="https://buymeacoffee.com/xylight">
+      <img src="/logos/bmc.svg" width={28} height={28} alt="Buy me a Coffee" class="adaptive-color">
     </Card>
   </div>
   <!-- <p class="description fade">UI Design — Software Development</p> -->
@@ -156,5 +159,11 @@
     flex-direction: row;
     align-items: center;
     gap: .5rem;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    .adaptive-color {
+      filter: invert(100%) hue-rotate(180deg) brightness(500%); 
+    }
   }
 </style>

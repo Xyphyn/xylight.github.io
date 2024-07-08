@@ -4,6 +4,11 @@
   let { children } = $props()
 </script>
 
+<svelte:head>
+  <title>xylight.dev</title>
+  <meta name="description" content="Xylight, the developer of Photon.">
+</svelte:head>
+
 <div class="layout">
   <main class="shell">
     {@render children()}
