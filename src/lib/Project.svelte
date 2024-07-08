@@ -36,7 +36,6 @@
     max-width: max-content;
     flex-direction: row;
     gap: 3px;
-    align-items: center;
     font-size: small;
     text-decoration: none;
     color: rgb(var(--link-fg));
@@ -47,20 +46,14 @@
   }
 
   .footer {
+    margin-top: auto;
     display: flex;
     flex-direction: row;
+    align-items: end;
     gap: 8px;
   }
 
   .space-right {
     margin-right: auto;
-  }
-
-  .technology {
-    border-radius: 9999px;
-    display: grid;
-    place-items: center;
-    background-color: var(--color);
-    padding: 8px;
   }
 </style>

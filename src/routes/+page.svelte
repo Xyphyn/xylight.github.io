@@ -33,10 +33,11 @@
   <div class="grid grid-auto">
     <Card>
       {#snippet title()}
-        UI Design
+        Web Design
       {/snippet}
       {#snippet body()}
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia dolores perferendis, aliquid cumque dicta, itaque minus ipsa earum minima animi, dolorem incidunt obcaecati corporis vitae blanditiis doloribus tempore possimus tenetur.
+        I enjoy making new designs for UI and such, even if it's unconventional. This website
+        is the result of me experimenting with a serif and sepia style for a website.        
       {/snippet}
     </Card>
     <Card>
@@ -44,7 +45,9 @@
         Software Development
       {/snippet}
       {#snippet body()}
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi quo qui tenetur possimus inventore, dicta, assumenda nisi unde architecto impedit nostrum? Nostrum facere aspernatur reprehenderit. Reiciendis ut magni assumenda nesciunt.
+        I'll occasionally write small pieces of software, especially if there's a repetetive task
+        I need to do. I often try new programming languages when I write these. Base-to-base, a number converter,
+        helped me learn rust and it's very useful to convert hexadecimal to decimal and back.
       {/snippet}
     </Card>
   </div>
