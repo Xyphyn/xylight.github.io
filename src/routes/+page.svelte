@@ -22,9 +22,6 @@
     <Card alt size="xs" href="https://lemdro.id/u/xylight">
       <img src="/logos/lemmy.svg" width={28} height={28} alt="Lemmy">
     </Card>
-    <Card alt size="xs" href="#discord">
-      <img src="/logos/discord.svg" width={28} height={28} alt="Discord">
-    </Card>
   </div>
   <!-- <p class="description fade">UI Design — Software Development</p> -->
 </header>
