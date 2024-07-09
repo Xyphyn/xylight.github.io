@@ -2,7 +2,7 @@
   import Card from '$lib/Card.svelte'
   import Project from '$lib/Project.svelte'
   import Technologies from '$lib/Technologies.svelte'
-    import { Icon, Sparkles } from 'svelte-hero-icons'
+    import { AtSymbol, Calculator, CodeBracket, Icon, PaintBrush, PuzzlePiece, ServerStack, Sparkles } from 'svelte-hero-icons'
   import { slide } from 'svelte/transition'
 
 
@@ -34,7 +34,7 @@
 <section>
   <h2 style="line-height: 1; margin-top: 0;">What I do</h2>
   <div class="grid grid-auto">
-    <Card>
+    <Card icon={PaintBrush}>
       {#snippet title()}
         Web Design
       {/snippet}
@@ -43,7 +43,7 @@
         is the result of me experimenting with a serif and sepia style for a website.        
       {/snippet}
     </Card>
-    <Card>
+    <Card icon={CodeBracket}>
       {#snippet title()}
         Software Development
       {/snippet}
@@ -66,7 +66,7 @@
 
   <div class="grid grid-auto">
     <div style="grid-column: 1/-1">
-      <Project link={{ url: 'https://phtn.app', name: 'phtn.app'}} technologies={['svelte', 'typescript']}>
+      <Project icon={AtSymbol} link={{ url: 'https://phtn.app', name: 'phtn.app'}} technologies={['svelte', 'typescript']}>
         {#snippet title()}
         Photon
         {/snippet}
@@ -77,7 +77,7 @@
         {/snippet}
       </Project>
     </div>
-    <Project link={{ url: 'https://imagi.xylight.dev', name: 'imagi.xylight.dev' }} technologies={['svelte', 'typescript']}>
+    <Project icon={AtSymbol} link={{ url: 'https://imagi.xylight.dev', name: 'imagi.xylight.dev' }} technologies={['svelte', 'typescript']}>
       {#snippet title()}
         Imagi
       {/snippet}
@@ -86,7 +86,7 @@
         The post list, comments, etc are automatically updated in real time.
       {/snippet}
     </Project>
-    <Project link={{ url: 'https://github.com/Xyphyn/Pulse', name: 'github.com' }}
+    <Project icon={ServerStack} link={{ url: 'https://github.com/Xyphyn/Pulse', name: 'github.com' }}
     technologies={['kotlin']}>
       {#snippet title()}
         Pulse
@@ -97,7 +97,7 @@
         The code is not good. 
       {/snippet}
     </Project>
-    <Project link={{ url: 'https://github.com/Xyphyn/base-to-base', name: 'github.com' }}
+    <Project icon={Calculator} link={{ url: 'https://github.com/Xyphyn/base-to-base', name: 'github.com' }}
     technologies={['rust']}>
       {#snippet title()}
         Base to Base
@@ -105,6 +105,15 @@
       {#snippet body()}
         A tiny command line utility I made to learn Rust. It lets you easily convert numbers
         between bases, such as seeing all the conversions of a hex number at once.
+      {/snippet}
+    </Project>
+    <Project icon={PuzzlePiece} link={{ url: 'https://github.com/Xyphyn/xylo-bot', name: 'github.com' }}
+    technologies={['typescript']}>
+      {#snippet title()}
+        Xylo
+      {/snippet}
+      {#snippet body()}
+        Yet another Discord bot with a terrible name.
       {/snippet}
     </Project>
   </div>

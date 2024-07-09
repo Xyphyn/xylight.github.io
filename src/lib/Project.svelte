@@ -16,10 +16,11 @@
     title: Snippet
     body: Snippet
     technologies?: Technology[]
+    [key: string]: any
   }>()
 </script>
 
-<Card {title} {body} href={link?.url}>
+<Card {...props} {title} {body} href={link?.url}>
   <div class="footer">
     {#if link}
       <span class="link space-right">

@@ -1,5 +1,5 @@
 :root {
-  --shell-bg:  255, 250, 245;
+  --shell-bg: 255, 250, 245;
   --shell-bg-dots: 220, 210, 200;
   --shell-fg: 35, 35, 30;
   --shell-fg-secondary: 120, 117, 110;
@@ -10,6 +10,7 @@
   --card-border: 228, 214, 196;
   --card-bg-hover: 250, 248, 240;
   --link-fg: 129, 120, 107;
+  --accent-bg: 255, 173, 105;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -24,6 +25,7 @@
     --card-fg: var(--shell-fg);
     --card-bg-hover: 45, 50, 47;
     --link-fg: 176, 181, 176;
+    --accent-bg: 148, 255, 203;
     color-scheme: dark;
   }
 }
@@ -34,7 +36,8 @@
   font-display: swap;
 }
 
-html,body {
+html,
+body {
   background-color: rgb(var(--shell-bg));
   color: rgb(var(--shell-fg));
   font-family: 'Sentient';
@@ -42,4 +45,3 @@ html,body {
   margin: 0;
   min-height: 100vh;
 }
-

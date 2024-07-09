@@ -1,8 +1,9 @@
 <script lang="ts">
   import type { Snippet } from 'svelte'
+  import { Icon, type IconSource } from 'svelte-hero-icons'
 
   let { title, body, children, shadow = true, round = true,
-    layout = true, href, size = 'md', alt = false, ...props } = $props<{
+    layout = true, href, size = 'md', alt = false, icon, ...props } = $props<{
     title?: Snippet<[any]>
     body?: Snippet<[any]>,
     children?: Snippet<[any]>,
@@ -11,7 +12,8 @@
     layout?: boolean,
     href?: string,
     size?: Size,
-    alt?: boolean
+    alt?: boolean,
+    icon?: IconSource
   }>()
 
   const sizes: {
@@ -36,7 +38,20 @@
   class="card {sizes[size]}"
 >
   {#if title}
-    <span class="title">{@render title()}</span>
+    <div class="title">
+      <span>
+        {@render title()}
+      </span>
+      {#if icon}
+        <div class="icon">
+          <Icon
+            src={icon}
+            size="18"
+            micro
+          />
+        </div>
+      {/if}
+    </div>
   {/if}
   {#if body}
     <p class="body">{@render body()}</p>
@@ -115,12 +130,27 @@
 
   .title {
     font-weight: 500;
-    font-size: large;
+    font-size: 1.4em;
+    width: 100%;
+    display: inline-flex;
+    justify-content: space-between;
   }
 
   .body {
     margin: 0;
     font-size: 0.9em;
     max-width: 32rem;
+  }
+
+  .icon {
+    background: rgb(var(--card-bg));
+    border-radius: 999px;
+    width: 24px;
+    height: 24px;
+    padding: .25rem;
+    display: grid;
+    place-items: center;
+    border: 1px solid rgb(var(--card-border));
+    color: rgb(var(--accent-bg))
   }
 </style>
