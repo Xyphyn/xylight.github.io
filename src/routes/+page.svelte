@@ -32,7 +32,7 @@
   <!-- <p class="description fade">UI Design — Software Development</p> -->
 </header>
 <section>
-  <h2 style="line-height: 1; margin-top: 0;">What I do</h2>
+  <h2 style="line-height: 1;;">What I do</h2>
   <div class="grid grid-auto">
     <Card icon={PaintBrush}>
       {#snippet title()}
