@@ -23,13 +23,13 @@
   }
 
   .shell {
-    max-width: 48rem;
     place-self: center;
     margin-left: auto;
     margin-right: auto;
     z-index: 50;
-    position: relative;
     height: 100%;
+    width: 100%;
+    position: relative;
   }
 
   :global(.shell > *) {
@@ -51,7 +51,9 @@
     width: 100vw;
     height: 100vh;
     overflow: hidden;
-    background-image: radial-gradient(rgb(var(--shell-bg-dots)) 2px, transparent 0);
+    background-image:
+      linear-gradient(to right, rgb(var(--shell-bg-dots)) 1px, transparent 0),
+      linear-gradient(to bottom, rgb(var(--shell-bg-dots)) 1px, transparent 0);
     background-size: 20px 20px;
     mask-image: linear-gradient(to right, rgb(0, 0, 0, 1), rgb(0, 0, 0, 0), rgb(0, 0, 0, 1));
   }

@@ -13,8 +13,7 @@
   .heading:first-child {
     margin-top: 0;
   }
-
   .heading {
-    margin-top: .75rem;
+    margin-top: 2rem;
   }
 </style>

@@ -9,23 +9,23 @@
 </script>
 
 <article class="body">
-<header class="heading center">
+<header class="heading">
   <h1 class="title">
     xylight
   <span style="font-weight:300;color:rgb(var(--shell-fg));">.dev</span>
 </h1>
 
   <div class="footer">
-    <Card alt size="xs" href="https://github.com/Xyphyn">
+    <Card round size="xs" href="https://github.com/Xyphyn">
       <img src="/logos/github.svg" width={28} height={28} alt="GitHub" class="adaptive-color">
     </Card>
-    <Card alt size="xs" href="mailto:xylight@xylight.dev">
+    <Card round size="xs" href="mailto:xylight@xylight.dev">
       <img src="/logos/email.svg" width={28} height={28} alt="Email" class="adaptive-color">
     </Card>
-    <Card alt size="xs" href="https://lemdro.id/u/xylight">
+    <Card round size="xs" href="https://lemdro.id/u/xylight">
       <img src="/logos/lemmy.svg" width={28} height={28} alt="Lemmy">
     </Card>
-    <Card alt size="xs" href="https://buymeacoffee.com/xylight">
+    <Card round size="xs" href="https://buymeacoffee.com/xylight">
       <img src="/logos/bmc.svg" width={28} height={28} alt="Buy me a Coffee" class="adaptive-color">
     </Card>
   </div>
@@ -40,7 +40,7 @@
       {/snippet}
       {#snippet body()}
         I enjoy making new designs for UI and such, even if it's unconventional. This website
-        is the result of me experimenting with a serif and sepia style for a website.        
+        is the result of me experimenting with a lights out style website.        
       {/snippet}
     </Card>
     <Card icon={CodeBracket}>
@@ -55,12 +55,16 @@
     </Card>
   </div>
 </section>
-<section>
+<!-- <section>
   <h2 style="line-height: 1;">What I use</h2>
   <div class="technologies">
     <Technologies itemSize={32} technologies={['svelte', 'typescript', 'kotlin', 'rust']} />
   </div>
-</section>
+</section> -->
+<div 
+class="light-source"
+ style="width: 20rem; height: 16rem; position: absolute; right: 30%; top:2rem; border-radius: 9999px;"
+></div>
 <section>
   <h2 style="line-height: 1;">What I made</h2>
 
@@ -134,12 +138,25 @@
     }
   }
 
-  h2 {
-    margin-top: 3rem;
+  .body {
+    box-shadow: 0 0 0 1px rgb(var(--card-border));
+    background-color: rgb(var(--shell-bg));
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    position: relative;
+    z-index: 0;
   }
 
-  .center {
-    text-align: center;
+  .body > * {
+    padding: 0rem 0rem;
+    box-shadow: 0 0 0 1px rgb(var(--card-border));
+    margin: 0;
+  }
+
+  .body h1,h2 { 
+    padding: 2rem 2rem;
+    margin: 0 !important;
   }
 
   .title {
@@ -147,18 +164,28 @@
     display: inline-flex;
     flex-direction: row;
     margin: 0;
-    background: linear-gradient(90deg, rgba(255,77,49,1) 0%, rgba(255,205,108,1) 32%, rgba(255, 173, 105,1) 74%, rgba(255,77,49,1) 100%);
+    background: linear-gradient(90deg, rgba(148,255,203,1) 0%, rgba(108,194,255,1) 32%, rgba(107,255,105,1) 64%, rgba(49,117,255,1) 100%);
     background-clip: text;
     background-size: 200%;
-    animation: gradientAnimation 10s infinite ease-in-out;
+    animation: gradientAnimation 5s infinite ease-in-out;
     color: transparent;
     position: relative;
   }
 
-  @media (prefers-color-scheme: dark) {
-    .title {
-      background-image: linear-gradient(90deg, rgba(148,255,203,1) 0%, rgba(108,194,255,1) 32%, rgba(107,255,105,1) 64%, rgba(49,117,255,1) 100%);
-    }
+  .heading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 24rem;
+    background: linear-gradient(to top, rgba(0, 255, 42, 0.025), rgba(108, 167, 255, 0.025));
+  }
+
+  .light-source {
+    /* filter: blur(256px);
+    z-index: -10;
+    background: radial-gradient(circle, rgb(0, 255, 132), rgb(130, 108, 255)); */
+    box-shadow: none;
   }
 
   @media screen and (min-width: 468px) {
@@ -173,23 +200,9 @@
     }
   }
 
-  .heading {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .heading .description {
-    font-size: 1.5rem;
-  }
-
-  .fade {
-    color: rgb(var(--shell-fg-secondary));
-  }
-
   .grid {
     display: grid;
-    gap: 1rem;
+    gap: 1px;
   }
 
   .grid-auto {
@@ -202,34 +215,25 @@
     }
   }
 
-  .technologies {
-    display: flex;
-    flex-direction: row;
-    gap: .25rem;
-    align-items: center;
-    flex-wrap: wrap;
+  .adaptive-color {
+    filter: invert(100%) hue-rotate(180deg) brightness(500%);
   }
 
   .footer {
     display: flex;
     flex-direction: row;
-    align-items: center;
-    gap: .5rem;
+    border: 1px solid rgb(var(--card-border));
+    background-color: rgb(var(--card-bg));
+    border-radius: 1rem;
+    padding: 0.25rem;
+    gap: .25rem;
   }
 
-  @media (prefers-color-scheme: dark) {
-    .adaptive-color {
-      filter: invert(100%) hue-rotate(180deg) brightness(500%); 
-    }
+  :global(.footer > *) {
+    box-shadow: none !important;
   }
 
-  .body {
-    padding: 1.5rem;
-  }
-
-  @media screen and (min-width: 768px) {
-    .body {
-      padding: 2rem;
-    }
+  h2 {
+    font-size: xx-large;
   }
 </style>

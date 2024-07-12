@@ -1,33 +1,18 @@
 :root {
-  --shell-bg: 255, 250, 245;
-  --shell-bg-dots: 220, 210, 200;
-  --shell-fg: 35, 35, 30;
-  --shell-fg-secondary: 120, 117, 110;
-  --card-bg: 255, 252, 245;
-  --card-bg-2: 250, 245, 235;
-  --card-bg-secondary: 250, 245, 235;
+  --shell-bg: 10, 10, 10;
+  --shell-fg: 255, 255, 255;
+  --shell-fg-p: 220, 220, 220;
+  --shell-bg-dots: 0, 0, 0;
+  --card-bg: var(--shell-bg);
+  --card-bg-2: var(--shell-bg);
+  --card-bg-secondary: 10, 10, 10;
+  --card-border: 20, 20, 20;
   --card-fg: var(--shell-fg);
-  --card-border: 228, 214, 196;
-  --card-bg-hover: 250, 248, 240;
-  --link-fg: 129, 120, 107;
-  --accent-bg: 255, 173, 105;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --shell-bg: 25, 28, 25;
-    --shell-fg: 230, 240, 230;
-    --shell-bg-dots: var(--card-bg-hover);
-    --card-bg: 32, 37, 34;
-    --card-bg-2: 27, 32, 31;
-    --card-bg-secondary: 10, 15, 10;
-    --card-border: 53, 60, 55;
-    --card-fg: var(--shell-fg);
-    --card-bg-hover: 45, 50, 47;
-    --link-fg: 176, 181, 176;
-    --accent-bg: 148, 255, 203;
-    color-scheme: dark;
-  }
+  --card-bg-hover: 20, 20, 20;
+  --card-bg-secondary-hover: 50, 50, 50;
+  --link-fg: 176, 181, 176;
+  --accent-bg: 148, 255, 203;
+  color-scheme: dark;
 }
 
 @font-face {
@@ -36,11 +21,23 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: 'Satoshi';
+  src: url('/font/satoshi.woff2') format('woff2');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Switzer';
+  src: url('/font/switzer.woff2') format('woff2');
+  font-display: swap;
+}
+
 html,
 body {
   background-color: rgb(var(--shell-bg));
   color: rgb(var(--shell-fg));
-  font-family: 'Sentient';
+  font-family: 'Satoshi';
   padding: 0;
   margin: 0;
   min-height: 100vh;

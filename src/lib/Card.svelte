@@ -2,7 +2,7 @@
   import type { Snippet } from 'svelte'
   import { Icon, type IconSource } from 'svelte-hero-icons'
 
-  let { title, body, children, shadow = true, round = true,
+  let { title, body, children, shadow = false, round = false,
     layout = true, href, size = 'md', alt = false, icon, ...props } = $props<{
     title?: Snippet<[any]>
     body?: Snippet<[any]>,
@@ -63,43 +63,27 @@
 
 <style>
   .card {
-    background: linear-gradient(to bottom, rgb(var(--card-bg)), rgb(var(--card-bg-2)));
+    background-color: rgb(var(--card-bg));
     color: rgb(var(--card-fg));
-    border: 1px solid rgb(var(--card-border));
-    transition: --card-bg-1 100ms, --card-bg-2 100ms;
+    box-shadow:0 0 0 1px rgb(var(--card-border));
+    transition: background-color 100ms;
     text-decoration: none;
     fill: rgb(var(--card-fg));
     position: relative;
     z-index: 1;
   }
 
-  
-  .card::before {
-    position: absolute;
-    content: '';
-    inset: 0;
-    background-image: linear-gradient(to bottom, rgb(var(--card-bg)), rgb(var(--card-bg-hover)));
-    z-index: -1;
-    transition: opacity 50ms linear;
-    opacity: 0;
-  }
-
-  .card-round::before {
-    border-radius: .75rem;
-  }
-  
-
-  .card:hover::before {
-    opacity: 1;
+  .card:not(.card-alt):hover {
+    background-color: rgb(var(--card-bg-hover));
+    cursor: pointer;
   }
 
   .card-alt {
-    background: rgb(var(--card-bg-secondary));
+    background-color: rgb(var(--card-bg-secondary));
   }
 
-  .card:hover {
-    /* background: linear-gradient(to bottom, var(--card-bg-hover), var(--card-bg-hover)); */
-    cursor: pointer;
+  .card-alt:hover {
+    background-color: rgb(var(--card-bg-secondary-hover)) !important;
   }
 
   .card-xs {
@@ -129,7 +113,7 @@
   }
 
   .title {
-    font-weight: 500;
+    font-weight: 700;
     font-size: 1.4em;
     width: 100%;
     display: inline-flex;
