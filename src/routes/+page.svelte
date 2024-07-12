@@ -2,7 +2,7 @@
   import Card from '$lib/Card.svelte'
   import Project from '$lib/Project.svelte'
   import Technologies from '$lib/Technologies.svelte'
-    import { AtSymbol, Calculator, CodeBracket, Icon, PaintBrush, PuzzlePiece, ServerStack, Sparkles } from 'svelte-hero-icons'
+    import { AtSymbol, Calculator, CodeBracket, Icon, Newspaper, PaintBrush, PuzzlePiece, ServerStack, Sparkles } from 'svelte-hero-icons'
   import { slide } from 'svelte/transition'
 
 
@@ -16,17 +16,20 @@
 </h1>
 
   <div class="footer">
-    <Card round size="xs" href="https://github.com/Xyphyn">
+    <Card alt round size="xs" href="https://github.com/Xyphyn">
       <img src="/logos/github.svg" width={28} height={28} alt="GitHub" class="adaptive-color">
     </Card>
-    <Card round size="xs" href="mailto:xylight@xylight.dev">
+    <Card alt round size="xs" href="mailto:xylight@xylight.dev">
       <img src="/logos/email.svg" width={28} height={28} alt="Email" class="adaptive-color">
     </Card>
-    <Card round size="xs" href="https://lemdro.id/u/xylight">
+    <Card alt round size="xs" href="https://lemdro.id/u/xylight">
       <img src="/logos/lemmy.svg" width={28} height={28} alt="Lemmy">
     </Card>
-    <Card round size="xs" href="https://buymeacoffee.com/xylight">
+    <Card alt round size="xs" href="https://buymeacoffee.com/xylight">
       <img src="/logos/bmc.svg" width={28} height={28} alt="Buy me a Coffee" class="adaptive-color">
+    </Card>
+    <Card alt round size="xs" href="https://buymeacoffee.com/xylight">
+      <Icon src={Newspaper} size="28" solid />
     </Card>
   </div>
   <!-- <p class="description fade">UI Design — Software Development</p> -->

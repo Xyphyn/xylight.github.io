@@ -27,32 +27,14 @@
 </div>
 
 <style>
-  .container {
-    z-index: 0;
-    margin: 2rem 0;
-    width: 100%;
-  }
-
   .body {
     height: 100%;
-    background-color: white;
-    padding: 1rem;
-    border-radius: 1rem;
+    padding: 1.5rem;
     margin-top: 0;
     z-index: 50;
     font-size: large;
-  }
-
-  @media (prefers-color-scheme: dark) {
-    .body {
-      background-color: rgb(var(--card-bg-secondary));
-    }
-  }
-
-  @media screen and (min-width: 768px) {
-    .body {
-      padding: 2rem;
-    }
+    box-shadow: 0 0 0 1px rgb(var(--card-border));
+    background-color: rgb(var(--card-bg-secondary));
   }
 
   .meta {
@@ -62,7 +44,6 @@
     margin-left: auto;
     margin-right: auto;
     z-index: -10;
-    margin: 1rem;
   }
 
   :global(.meta .title) {

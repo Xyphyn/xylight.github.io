@@ -1,15 +1,15 @@
 :root {
-  --shell-bg: 10, 10, 10;
+  --shell-bg: 20, 20, 20;
   --shell-fg: 255, 255, 255;
   --shell-fg-p: 220, 220, 220;
-  --shell-bg-dots: 0, 0, 0;
+  --shell-bg-dots: 30, 30, 30;
   --card-bg: var(--shell-bg);
   --card-bg-2: var(--shell-bg);
-  --card-bg-secondary: 10, 10, 10;
-  --card-border: 20, 20, 20;
+  --card-bg-secondary: 20, 20, 20;
+  --card-border: 40, 40, 40;
   --card-fg: var(--shell-fg);
   --card-bg-hover: 20, 20, 20;
-  --card-bg-secondary-hover: 50, 50, 50;
+  --card-bg-secondary-hover: 40, 40, 40;
   --link-fg: 176, 181, 176;
   --accent-bg: 148, 255, 203;
   color-scheme: dark;
