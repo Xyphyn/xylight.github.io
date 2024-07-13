@@ -7,7 +7,7 @@
 </script>
 
 <div class="layout">
-  <nav class="leftbar">
+  <!-- <nav class="leftbar">
     {#each data.posts as post}
       <Card href="/posts/{post.slug}" alt layout={false}>
         <div class="link">
@@ -17,7 +17,7 @@
         </div>
       </Card>
     {/each}
-  </nav>
+  </nav> -->
   {@render children()}
 </div>
 
@@ -25,6 +25,7 @@
   .layout {
     display: grid;
     grid-template-columns: 1fr;
+    place-items: center;
     gap: 1px;
   }
 
@@ -36,7 +37,7 @@
     top: 0;
   }
 
-  @media screen and (min-width: 900px) {
+  /* @media screen and (min-width: 900px) {
     .layout {
       grid-template-columns: 1fr 2fr;
     }
@@ -49,7 +50,7 @@
     .layout {
       grid-template-columns: 1fr 2fr 1fr;
     }
-  }
+  } */
   
   .layout > * {
     padding: 0rem 0rem;

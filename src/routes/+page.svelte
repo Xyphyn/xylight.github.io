@@ -28,9 +28,6 @@
     <Card alt round size="xs" href="https://buymeacoffee.com/xylight">
       <img src="/logos/bmc.svg" width={28} height={28} alt="Buy me a Coffee" class="adaptive-color">
     </Card>
-    <Card alt round size="xs" href="/posts">
-      <Icon src={Newspaper} size="28" solid />
-    </Card>
   </div>
   <!-- <p class="description fade">UI Design — Software Development</p> -->
 </header>
