@@ -12,7 +12,6 @@
 
 <div class="layout">
   <main class="shell">
-  <Nav />
   {@render children()}
   </main>
   <div class="background-dots"></div>
