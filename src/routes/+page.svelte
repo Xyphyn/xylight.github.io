@@ -19,37 +19,31 @@
     <Card alt round size="xs" href="https://github.com/Xyphyn">
       <img src="/logos/github.svg" width={28} height={28} alt="GitHub" class="adaptive-color">
     </Card>
-    <Card alt round size="xs" href="mailto:xylight@xylight.dev">
-      <img src="/logos/email.svg" width={28} height={28} alt="Email" class="adaptive-color">
-    </Card>
     <Card alt round size="xs" href="https://lemdro.id/u/xylight">
       <img src="/logos/lemmy.svg" width={28} height={28} alt="Lemmy">
     </Card>
     <Card alt round size="xs" href="https://buymeacoffee.com/xylight">
       <img src="/logos/bmc.svg" width={28} height={28} alt="Buy me a Coffee" class="adaptive-color">
     </Card>
+    <Card alt round size="xs" href="mailto:xylight@xylight.dev">
+      <img src="/logos/email.svg" width={28} height={28} alt="Email" class="adaptive-color">
+    </Card>
+    <Card alt round size="xs" href="https://matrix.to/#/@xylightsucks:matrix.org">
+      <img src="/logos/matrix.svg" width={28} height={28} alt="Matrix" class="adaptive-color">
+    </Card>
   </div>
   <!-- <p class="description fade">UI Design — Software Development</p> -->
 </header>
 <section style="--animate-index: 2;" class="fly-in">
-  <h2 style="line-height: 1;;">What I do</h2>
   <div class="grid grid-auto">
-    <Card icon={PaintBrush}>
-      {#snippet title()}
-        Web Design
-      {/snippet}
-      {#snippet body()}
-        I enjoy making new designs for UI and such, even if it's unconventional. 
-      {/snippet}
-    </Card>
-    <Card icon={CodeBracket}>
-      {#snippet title()}
-        Software Development
-      {/snippet}
-      {#snippet body()}
-        I have been learning Rust and Kotlin as something other than web development, to try and make more interesting projects.
-      {/snippet}
-    </Card>
+    <div style="grid-column: 1/-1">
+      <Card icon={PaintBrush}>
+        {#snippet body()}
+          I'm a "developer" from California who primarily does UI design and software dev. 
+          I prefer to use Svelte for web development, and Rust/Kotlin for everything else. 
+        {/snippet}
+      </Card>
+    </div>
   </div>
 </section>
 <section style="--animate-index: 3;" class="fly-in">

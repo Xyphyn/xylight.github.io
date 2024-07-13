@@ -122,7 +122,6 @@
 
   .body {
     margin: 0;
-    font-size: 0.9em;
     max-width: 32rem;
   }
 
