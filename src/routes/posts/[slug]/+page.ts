@@ -1,6 +1,10 @@
 import { slugFromPath } from '$lib/blog.js'
 import { error } from '@sveltejs/kit'
 
+export function entries() {
+  return [{ slug: 'serif-design' }]
+}
+
 export async function load({ params }) {
   try {
     const post = await import(`../content/${params.slug}.md`)
