@@ -42,8 +42,7 @@
         Web Design
       {/snippet}
       {#snippet body()}
-        I enjoy making new designs for UI and such, even if it's unconventional. This website
-        is the result of me experimenting with a lights out style website.        
+        I enjoy making new designs for UI and such, even if it's unconventional. 
       {/snippet}
     </Card>
     <Card icon={CodeBracket}>
@@ -51,9 +50,7 @@
         Software Development
       {/snippet}
       {#snippet body()}
-        I'll occasionally write small pieces of software, especially if there's a repetitive task
-        I need to automate. I often try new programming languages when I write these. Base-to-base, a number converter,
-        helped me learn rust and it's very useful to convert hexadecimal to decimal and back.
+        I have been learning Rust and Kotlin as something other than web development, to try and make more interesting projects.
       {/snippet}
     </Card>
   </div>
