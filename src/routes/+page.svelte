@@ -15,7 +15,7 @@
   <span style="font-weight:300;color:rgb(var(--shell-fg));">.dev</span>
 </h1>
 
-  <div class="footer">
+  <div class="footer fly-in" style="--animate-index: 1;">
     <Card alt round size="xs" href="https://github.com/Xyphyn">
       <img src="/logos/github.svg" width={28} height={28} alt="GitHub" class="adaptive-color">
     </Card>
@@ -34,7 +34,7 @@
   </div>
   <!-- <p class="description fade">UI Design — Software Development</p> -->
 </header>
-<section style="--animate-index: 1;" class="fly-in">
+<section style="--animate-index: 2;" class="fly-in">
   <h2 style="line-height: 1;;">What I do</h2>
   <div class="grid grid-auto">
     <Card icon={PaintBrush}>
@@ -58,18 +58,8 @@
     </Card>
   </div>
 </section>
-<!-- <section>
-  <h2 style="line-height: 1;">What I use</h2>
-  <div class="technologies">
-    <Technologies itemSize={32} technologies={['svelte', 'typescript', 'kotlin', 'rust']} />
-  </div>
-</section> -->
-<div 
-class="light-source"
- style="width: 20rem; height: 16rem; position: absolute; right: 30%; top:2rem; border-radius: 9999px;"
-></div>
-<section style="--animate-index: 2;" class="fly-in">
-  <h2 style="line-height: 1;">What I made</h2>
+<section style="--animate-index: 3;" class="fly-in">
+  <h2 style="line-height: 1;">What I've made</h2>
 
   <div class="grid grid-auto">
     <div style="grid-column: 1/-1">
@@ -129,10 +119,6 @@ class="light-source"
 </article>
 
 <style>
-  .fly-in {
-    animation-delay: calc(200ms * var(--animate-index));
-  }
-  
   @keyframes gradientAnimation {
     0% {
       background-position-x: left;
@@ -153,6 +139,7 @@ class="light-source"
     gap: 1px;
     position: relative;
     z-index: 0;
+    margin: 0;
   }
 
   .body > * {
@@ -167,7 +154,7 @@ class="light-source"
   }
 
   .title {
-    font-size: 3em;
+    font-size: 3.5em;
     display: inline-flex;
     flex-direction: row;
     margin: 0;
@@ -222,8 +209,10 @@ class="light-source"
     }
   }
 
-  .adaptive-color {
-    filter: invert(100%) hue-rotate(180deg) brightness(500%);
+  @media (prefers-color-scheme: dark) {
+    .adaptive-color {
+      filter: invert(100%) hue-rotate(180deg) brightness(500%);
+    }
   }
 
   .footer {

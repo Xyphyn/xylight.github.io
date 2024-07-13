@@ -1,18 +1,37 @@
 :root {
-  --shell-bg: 20, 20, 20;
-  --shell-fg: 255, 255, 255;
-  --shell-fg-p: 220, 220, 220;
-  --shell-bg-dots: 30, 30, 30;
+  --shell-bg: 240, 245, 250;
+  --shell-fg: 20, 20, 30;
+  --shell-fg-p: 50, 50, 70;
+  --shell-bg-dots: 230, 235, 245;
   --card-bg: var(--shell-bg);
   --card-bg-2: var(--shell-bg);
-  --card-bg-secondary: 20, 20, 20;
-  --card-border: 40, 40, 40;
+  --card-bg-secondary: 235, 240, 250;
+  --card-border: 210, 220, 235;
   --card-fg: var(--shell-fg);
-  --card-bg-hover: 35, 35, 35;
-  --card-bg-secondary-hover: 40, 40, 40;
-  --link-fg: 176, 181, 176;
-  --accent-bg: 148, 255, 203;
-  color-scheme: dark;
+  --card-bg-hover: 225, 235, 245;
+  --card-bg-secondary-hover: 220, 230, 245;
+  --link-fg: 0, 90, 180;
+  --accent-bg: 0, 120, 180;
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --shell-bg: 20, 20, 20;
+    --shell-fg: 255, 255, 255;
+    --shell-fg-p: 220, 220, 220;
+    --shell-bg-dots: 30, 30, 30;
+    --card-bg: var(--shell-bg);
+    --card-bg-2: var(--shell-bg);
+    --card-bg-secondary: 20, 20, 20;
+    --card-border: 40, 40, 40;
+    --card-fg: var(--shell-fg);
+    --card-bg-hover: 35, 35, 35;
+    --card-bg-secondary-hover: 40, 40, 40;
+    --link-fg: 176, 181, 176;
+    --accent-bg: 148, 255, 203;
+    color-scheme: dark;
+  }
 }
 
 @font-face {
@@ -46,7 +65,8 @@
 
 .fly-in {
   opacity: 0;
-  animation: 1s cubic-bezier(0.075, 0.82, 0.165, 1) 0s forwards flyIn;
+  animation: 1s cubic-bezier(0.075, 0.82, 0.165, 1)
+    calc(var(--animate-index) * 200ms) forwards flyIn;
 }
 
 html,

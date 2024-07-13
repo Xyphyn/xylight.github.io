@@ -1,4 +1,5 @@
 <script lang="ts">
+    import Nav from '$lib/Nav.svelte'
   import '../style/app.css'
 
   let { children } = $props()
@@ -11,7 +12,8 @@
 
 <div class="layout">
   <main class="shell">
-    {@render children()}
+  <Nav />
+  {@render children()}
   </main>
   <div class="background-dots"></div>
 </div>

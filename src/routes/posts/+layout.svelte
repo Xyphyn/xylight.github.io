@@ -1,6 +1,7 @@
 <script lang="ts">
-    import Card from "$lib/Card.svelte"
-    import { Icon, Newspaper } from "svelte-hero-icons"
+  import Card from "$lib/Card.svelte"
+  import Nav from "$lib/Nav.svelte"
+  import { Icon, Newspaper } from "svelte-hero-icons"
 
   let { data, children } = $props()
 </script>
