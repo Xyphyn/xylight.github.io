@@ -16,21 +16,16 @@
 </h1>
 
   <div class="footer fly-in" style="--animate-index: 1;">
-    <Card alt round size="xs" href="https://github.com/Xyphyn">
-      <img src="/logos/github.svg" width={28} height={28} alt="GitHub" class="adaptive-color">
-    </Card>
-    <Card alt round size="xs" href="https://lemdro.id/u/xylight">
-      <img src="/logos/lemmy.svg" width={28} height={28} alt="Lemmy">
-    </Card>
-    <Card alt round size="xs" href="https://buymeacoffee.com/xylight">
-      <img src="/logos/bmc.svg" width={28} height={28} alt="Buy me a Coffee" class="adaptive-color">
-    </Card>
-    <Card alt round size="xs" href="mailto:xylight@xylight.dev">
-      <img src="/logos/email.svg" width={28} height={28} alt="Email" class="adaptive-color">
-    </Card>
-    <Card alt round size="xs" href="https://matrix.to/#/@xylightsucks:matrix.org">
-      <img src="/logos/matrix.svg" width={28} height={28} alt="Matrix" class="adaptive-color">
-    </Card>
+    {#snippet link({ image, link, alt, adaptive = false })}
+      <Card alt round size="xs" href={link}>
+        <img src={image} width={28} height={28} alt={alt} class:adaptive-color={adaptive}>
+      </Card>
+    {/snippet}
+    {@render link({ image: "/logos/github.svg", link: "https://github.com/Xyphyn", alt: "GitHub", adaptive: true })}
+    {@render link({ image: "/logos/lemmy.svg", link: "https://lemdro.id/u/xylight", alt: "Lemmy", adaptive: false })}
+    {@render link({ image: "/logos/bmc.svg", link: "https://buymeacoffee.com/xylight", alt: "Buy me a Coffee", adaptive: true })}
+    {@render link({ image: "/logos/email.svg", link: "mailto:xylight@xylight.dev", alt: "Email", adaptive: true })}
+    {@render link({ image: "/logos/matrix.svg", link: "https://matrix.to/#/@xylightsucks:matrix.org", alt: "Matrix", adaptive: true })}
   </div>
   <!-- <p class="description fade">UI Design — Software Development</p> -->
 </header>
