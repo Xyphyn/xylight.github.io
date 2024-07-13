@@ -3,14 +3,14 @@
   import Project from '$lib/Project.svelte'
   import Technologies from '$lib/Technologies.svelte'
     import { AtSymbol, Calculator, CodeBracket, Icon, Newspaper, PaintBrush, PuzzlePiece, ServerStack, Sparkles } from 'svelte-hero-icons'
-  import { slide } from 'svelte/transition'
+  import { fly, slide } from 'svelte/transition'
 
 
 </script>
 
 <article class="body">
 <header class="heading">
-  <h1 class="title">
+  <h1 class="title fly-in">
     xylight
   <span style="font-weight:300;color:rgb(var(--shell-fg));">.dev</span>
 </h1>
@@ -34,7 +34,7 @@
   </div>
   <!-- <p class="description fade">UI Design — Software Development</p> -->
 </header>
-<section>
+<section style="--animate-index: 1;" class="fly-in">
   <h2 style="line-height: 1;;">What I do</h2>
   <div class="grid grid-auto">
     <Card icon={PaintBrush}>
@@ -68,7 +68,7 @@
 class="light-source"
  style="width: 20rem; height: 16rem; position: absolute; right: 30%; top:2rem; border-radius: 9999px;"
 ></div>
-<section>
+<section style="--animate-index: 2;" class="fly-in">
   <h2 style="line-height: 1;">What I made</h2>
 
   <div class="grid grid-auto">
@@ -129,6 +129,10 @@ class="light-source"
 </article>
 
 <style>
+  .fly-in {
+    animation-delay: calc(200ms * var(--animate-index));
+  }
+  
   @keyframes gradientAnimation {
     0% {
       background-position-x: left;
@@ -170,7 +174,7 @@ class="light-source"
     background: linear-gradient(90deg, rgba(148,255,203,1) 0%, rgba(108,194,255,1) 32%, rgba(107,255,105,1) 64%, rgba(49,117,255,1) 100%);
     background-clip: text;
     background-size: 200%;
-    animation: gradientAnimation 5s infinite ease-in-out;
+    animation: gradientAnimation 5s infinite ease-in-out, 500ms cubic-bezier(0.075, 0.82, 0.165, 1) 0s forwards flyIn;
     color: transparent;
     position: relative;
   }

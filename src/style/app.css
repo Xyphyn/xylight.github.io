@@ -33,6 +33,22 @@
   font-display: swap;
 }
 
+@keyframes flyIn {
+  from {
+    transform: translateY(-1rem);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+.fly-in {
+  opacity: 0;
+  animation: 1s cubic-bezier(0.075, 0.82, 0.165, 1) 0s forwards flyIn;
+}
+
 html,
 body {
   background-color: rgb(var(--shell-bg));
